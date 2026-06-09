@@ -64,6 +64,7 @@
     @media (max-width: 1120px) { .hero-grid { grid-template-columns: 1fr; } } @media (max-width: 920px) { .students-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } } @media (max-width: 760px) { .topbar-inner, .panel-header { flex-direction: column; align-items: stretch; } .topbar-actions { justify-content: flex-start; } .accessibility-panel { left: 0; right: auto; } .students-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero h1 { max-width: 100%; } .stats-grid { grid-template-columns: 1fr; } } @media (max-width: 430px) { .students-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
   <header class="topbar">
@@ -100,14 +101,14 @@
         <div class="hero-copy">
           <span class="eyebrow">Anuário digital • Exibição docente</span>
           <h1>Fotogramas por turma com leitura mais clara e acessível.</h1>
-          <p>Esta versão foi ajustada com recursos de acessibilidade visual e de navegação para facilitar o uso por professores, coordenação e demais usuários que precisem de melhor contraste, tipografia maior e leitura mais confortável.</p>
+          <p>Este site foi criado para reunir as fotos dos alunos em formato de anuário digital, facilitando a identificação dos estudantes pela coordenação, professores e demais funcionários do Ensino Médio Técnico do Senac RN.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="#turmas">Abrir turmas</a><a class="btn" href="#turmas">Visualizar anuário</a></div>
         </div>
         <aside class="hero-panel" aria-label="Resumo das turmas">
           <div class="hero-panel-content">
             <div><p style="font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.92; margin-bottom: 0.5rem;">Resumo geral</p><h2 style="font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.15; max-width: 13ch;">4 turmas organizadas para consulta rápida e clara.</h2></div>
             <div class="stats-grid"><div class="stat-card"><strong>1º A</strong><span>40 alunos</span></div><div class="stat-card"><strong>1º B</strong><span>40 alunos</span></div><div class="stat-card"><strong>2º A</strong><span>35 alunos</span></div><div class="stat-card"><strong>2º B</strong><span>35 alunos</span></div></div>
-            <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.93); max-width: 36ch;">Os recursos de acessibilidade ficam disponíveis em um menu compacto no topo da página.</p>
+            <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.93); max-width: 36ch;">Os recursos de acessibilidade estão disponíveis no topo da página.</p>
           </div>
         </aside>
       </div>
@@ -132,7 +133,7 @@
     function createStudents(total, turmaLabel) {
       return Array.from({ length: total }, (_, index) => ({
         id: index + 1,
-        photo: '/Imagens/',
+        photo: '/Imagens/FOTOGRAMA/1A',
         name: `Nome Sobrenome ${index + 1}`,
         description: 'Descrição do aluno.',
         clubs: ['Clube de Matemática', 'Redação'],
@@ -183,49 +184,24 @@
         { photo: '/Imagens/1A/willian-barros.jpg', name: 'Willian Barros', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
         { photo: '/Imagens/1A/willian-wallace-silva.jpg', name: 'Willian Wallace Silva', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] }
       ],
-      //2A
+      //2A->{ photo:'',name:'',description:'', clubs:['',''],extraSpecs:['','','']},
       'turma-2a': [ { photo: '/Imagens/2A/alice-carolina.jpg', name: 'Alice Carolina Campos', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['2º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
         { photo: '/Imagens/2A/ana-clara.jpg', name: 'Ana Clara Soares', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['2º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: '/Imagens/2A/ana-julia-da-costa.jpg', name: 'Ana Julia da Costa', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: '/Imagens/1A/antonio-heitor-carneiro.jpg', name: 'Antonio Heitor Carneiro', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: '/Imagens/1A/arthur-guilherme-ferreira.jpg', name: 'Arthur Guilherme Ferreira', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/breno-leonardo-da-silveira.jpg', name: 'Breno Leonardo da Silveira', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/dafiny-williany-pereira.jpg', name: 'Dafiny Williany Pereira', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/danilo-luiz-camara.jpg', name: 'Danilo Luiz Camara', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/emili-poliana-texeira.jpg', name: 'Emili Poliana Texeira', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/gabriel-araujo.jpg', name: 'Gabriel Araujo', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/gabriel-jacinto.jpg', name: 'Gabriel Jacinto', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/guillherme-delfino.jpg', name: 'Guillherme Delfino', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/henrique-nogueira.jpg', name: 'Henrique Nogueira', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/joao-levi-pina.jpg', name: 'João Levi Pina', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/joao-paulo-albuquerque.jpg', name: 'João Paulo Albuquerque', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/joao-vinicius-costa.jpg', name: 'João Vinicius Costa', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/josue-fernandes.jpg', name: 'Josué Fernandes', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/julia-ferreira.jpg', name: 'Julia Ferreira', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/julia-gabriela-belisario.jpg', name: 'Julia Gabriela Belisario', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/kaio-alexandre-coutinho.jpg', name: 'Kaio Alexandre Coutinho', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/larissa-emanuele-nogueira.jpg', name: 'Larissa Emanuele Nogueira', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/leticia-caroline-mendonca.jpg', name: 'Leticia Caroline Mendonça', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/leticia-sophia-fernandes.jpg', name: 'Leticia Sophia Fernandes', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/lucas-felipe-de-lima.jpg', name: 'Lucas Felipe de Lima', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/luis-henrique-da-silva.jpg', name: 'Luis Henrique da Silva', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/marcelo-felipe-de-oliveira.jpg', name: 'Marcelo Felipe de Oliveira', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/marcos-vinicius-anselmo.jpg', name: 'Marcos Vinicius Anselmo', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/maria-alice-bezerra.jpg', name: 'Maria Alice Bezerra', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/maria-cecilia-de-sousa.jpg', name: 'Maria Cecília de Sousa', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/maria-clara-ramos.jpg', name: 'Maria Clara Ramos', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/misael-de-araujo.jpg', name: 'Misael de Araújo', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/paola-goncalves.jpg', name: 'Paola Gonçalves', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/racso-emanoel-da-silva.jpg', name: 'Racso Emanoel da SIlva', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/sara-vitoria-salviano.jpg', name: 'Sara Vitória Salviano', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/sarah-toda.jpg', name: 'Sarah Toda', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/sonaly-maria-lopes.jpg', name: 'Sonaly Maria Lopes', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/vinicius-rodrigues.jpg', name: 'Vinicius Rodrigues', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/wesley-caua-rodrigues.jpg', name: 'Wesley Caua Rodrigues', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/willian-barros.jpg', name: 'Willian Barros', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
-        { photo: 'Imagens/1A/willian-wallace-silva.jpg', name: 'Willian Wallace Silva', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['1º A', 'Senac Médio Tec', 'CEP Zona Norte'] }
+        { photo: '/Imagens/2A/ana-suellen.jpg', name: 'Ana Suellen', description: 'Descrição da aluna.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['2º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
+        { photo: '/Imagens/2A/arthur-gabriel.jpg', name: 'Arthur Gabriel', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['2º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
+        { photo: '/Imagens/2A/breno-ricardo.jpg', name: 'Breno Ricardo', description: 'Descrição do aluno.', clubs: ['Clube de Matemática', 'Redação'], extraSpecs: ['2º A', 'Senac Médio Tec', 'CEP Zona Norte'] },
+        { photo: '/Imagens/2A/caio-flavio.jpg', name:'Caio Flávio',description:'Descrição do aluno', club:['Clube de Matemática','Redação'],extraSpecs:['2º A','Senac Médio Tec','CEP Zona Norte']},
+        { photo:'/Imagens/2A/caue-queiroz.jpg',name:'Cauê Queiroz',description:'Descrição do aluno', clubs:['Clube de Matemática','Redação'],extraSpecs:['2º A','Senac Médio Tec','CEP Zona Norte']},
+        { photo:'/Imagens/2A/erik-felipe.jpg',name:'Erik Felipe',description:'Descrição do aluno', clubs:['Clube de Matemática','Redação'],extraSpecs:['2º A','Senac Médio Tec','CEP Zona Norte']},
+        { photo:'/Imagens/fabiany-evellyn.jpg',name:'Fabiany Evellyn',description:'Decrição da aluna', clubs:['Clube de Matemática','Redação'],extraSpecs:['2º A','Senac Médio Tec','CEP Zona Norte']},        
+        { photo:'/Imagens/gabriel-roberto.jpg',name:'Gabriel Roberto',description:'Descrição do aluno', clubs:['Clube de Matemática','Redação'],extraSpecs:['2º A','Senac Médio Tec','CEP Zona Norte']},
+        { photo:'/Imagens/2A/heitor-barreto.jpg',name:'Heitor Barreto',description:'Líder de turma 2026', clubs:['Clube de Matemática','Redação'],extraSpecs:['2º A ','Senac Médio Tec','CEP Zona Norte']},
+        { photo:'',name:'',description:'', clubs:['',''],extraSpecs:['','','']},
+        
       ],
+      //1B
       'turma-1b': createStudents(40, '1º B'),
+      //2B
       'turma-2b': createStudents(35, '2º B')
     };
     function createStudentCard(student) {
